@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<AssemblyName>CardValidator</AssemblyName>
+		<RootNamespace>CardValidator</RootNamespace>
+
+		<Version>0.1.0</Version>
+		<FileVersion>0.1.0</FileVersion>
+		<AssemblyVersion>0.1.0</AssemblyVersion>
+		<title>Card Validator</title>
+
+		<Copyright>Copyright © Martin Procházka (aka. EnKor) 2023</Copyright>
+
+		<Description>Very performant tool helping you validate credit card numbers or generate them.</Description>
+		<PackageProjectUrl>https://github.com/enKor/CardValidator</PackageProjectUrl>
+		<PackageLicense>https://github.com/enKor/CardValidator/blob/main/LICENSE</PackageLicense>
+		<!--<PackageIconUrl>https://github.com/enKor/CardValidator/blob/main/logo.png</PackageIconUrl>-->
+		<PackageTags>CreditCard;Credit;Card;Validator;Generator;Check;Luhn;CardInfo;performance</PackageTags>
+		<Authors>Martin Procházka</Authors>
+		<Version>0.1.0</Version>
+		<PackageReleaseNotes>Init version</PackageReleaseNotes>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="EnKor.Luhn" Version="1.0.0" />
+	</ItemGroup>
+
+</Project>
