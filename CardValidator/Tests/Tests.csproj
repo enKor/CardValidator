@@ -24,7 +24,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\CardValidator\CardValidator.csproj" />
+	  <ProjectReference Include="..\Lib\Lib.csproj" />
 	</ItemGroup>
 
 </Project>
