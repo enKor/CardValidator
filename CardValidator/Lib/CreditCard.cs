@@ -31,7 +31,17 @@ public record CreditCard
         CardData.BrandConfigurations[Issuer].SkipLuhn ||
         (_isLuhnValid ??= Luhn.IsValid(Number));
 
-    public bool IsValid(params CardIssuer[] issuers) => issuers.Any(issuer => issuer == Issuer && IsValid());
+    public bool IsValid(params CardIssuer[] issuers)
+    {
+        for (var index = 0; index < issuers.Length; index++)
+        {
+            var issuer = issuers[index];
+            if (issuer == Issuer && IsValid()) return true;
+        }
+
+        return false;
+    }
+
 
     private void Load(bool ignoreNumberLength)
     {
