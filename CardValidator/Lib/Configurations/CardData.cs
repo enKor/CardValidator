@@ -1,4 +1,6 @@
-﻿namespace CardValidator;
+﻿using CardValidator.Helpers;
+
+namespace CardValidator.Configurations;
 
 internal static class CardData
 {

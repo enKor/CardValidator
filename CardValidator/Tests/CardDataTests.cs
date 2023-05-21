@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using CardValidator.Configurations;
+using Xunit;
 
 namespace CardValidator.Tests;
 

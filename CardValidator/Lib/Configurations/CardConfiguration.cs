@@ -1,4 +1,4 @@
-﻿namespace CardValidator;
+﻿namespace CardValidator.Configurations;
 
 internal record CardConfiguration
 {

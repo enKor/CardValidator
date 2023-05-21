@@ -1,4 +1,4 @@
-﻿namespace CardValidator;
+﻿namespace CardValidator.Helpers;
 
 internal static class ListHelper
 {

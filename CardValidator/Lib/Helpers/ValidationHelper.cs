@@ -1,4 +1,4 @@
-﻿namespace CardValidator;
+﻿namespace CardValidator.Helpers;
 
 internal static class ValidationHelper
 {
@@ -14,7 +14,7 @@ internal static class ValidationHelper
                 output[outputIndex] = input[i];
                 outputIndex++;
             }
-            else if(!char.IsWhiteSpace(input[i]))
+            else if (!char.IsWhiteSpace(input[i]))
             {
                 cleanCardNumber = null;
                 return false;
