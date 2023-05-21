@@ -1,4 +1,6 @@
-﻿namespace CardValidator;
+﻿using EnKor;
+
+namespace CardValidator;
 
 public record CreditCard
 {
@@ -16,6 +18,11 @@ public record CreditCard
 
         Load(ignoreCardNumberLength);
     }
+
+    public bool IsValid() => CardData.BrandConfigurations[Issuer].SkipLuhn || Luhn.IsValid(Number);
+
+    // TODO perf
+    public bool IsValid(params CardIssuer[] issuers) => issuers.Any(issuer => issuer == Issuer && IsValid());
 
     private void Load(bool ignoreNumberLength)
     {
