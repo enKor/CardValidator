@@ -5,7 +5,11 @@ namespace CardValidator;
 public record CreditCard
 {
     public string Number { get; }
+
     public CardIssuer Issuer { get; private set; }
+
+    public string Category => _category ??= IssuerCategory.Identifiers[Number[0]];
+    private string? _category;
     
     public CreditCard(ReadOnlySpan<char> cardNumber, bool ignoreCardNumberLength = false)
     {
