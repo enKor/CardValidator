@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using BenchmarkDotNet.Running;
+
+namespace CardValidator.Benchmarks;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        BenchmarkRunner.Run<MyBenchmark>();
+    }
+}

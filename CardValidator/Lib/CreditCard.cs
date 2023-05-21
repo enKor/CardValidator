@@ -12,6 +12,8 @@ public record CreditCard
 
     public string Category => _category ??= IssuerCategory.Identifiers[Number[0]];
     private string? _category;
+
+    private bool? _isLuhnValid;
     
     public CreditCard(ReadOnlySpan<char> cardNumber, bool ignoreCardNumberLength = false)
     {
@@ -25,9 +27,10 @@ public record CreditCard
         Load(ignoreCardNumberLength);
     }
 
-    public bool IsValid() => CardData.BrandConfigurations[Issuer].SkipLuhn || Luhn.IsValid(Number);
+    public bool IsValid() =>
+        CardData.BrandConfigurations[Issuer].SkipLuhn ||
+        (_isLuhnValid ??= Luhn.IsValid(Number));
 
-    // TODO perf
     public bool IsValid(params CardIssuer[] issuers) => issuers.Any(issuer => issuer == Issuer && IsValid());
 
     private void Load(bool ignoreNumberLength)
