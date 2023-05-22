@@ -8,11 +8,11 @@
 		<AssemblyName>CardValidator</AssemblyName>
 		<RootNamespace>CardValidator</RootNamespace>
 
-		<Version>1.0.0</Version>
-		<FileVersion>1.0.0</FileVersion>
-		<AssemblyVersion>1.0.0</AssemblyVersion>
-		<title>Card Validator</title>
+		<Version>1.1.0</Version>
+		<FileVersion>1.1.0</FileVersion>
+		<AssemblyVersion>1.1.0</AssemblyVersion>
 
+		<title>Card Validator</title>
 		<Copyright>Copyright © Martin Procházka (aka. EnKor) 2023</Copyright>
 
 		<Description>Very performant tool helping you validate credit card numbers or generate them.</Description>
@@ -22,10 +22,8 @@
 		<!--<PackageIconUrl>https://github.com/enKor/CardValidator/blob/main/logo.png</PackageIconUrl>-->
 		<PackageTags>CreditCard;Credit;Card;Validator;Generator;Check;Luhn;CardInfo;performance</PackageTags>
 		<Authors>Martin Procházka</Authors>
-		<Version>1.0.0</Version>
 		<PackageReleaseNotes>Init version</PackageReleaseNotes>
 	</PropertyGroup>
-
 
 	<ItemGroup>
 		<None Include="..\..\LICENSE" Pack="true" PackagePath=""/>
