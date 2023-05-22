@@ -7,7 +7,7 @@ It checks **number length and numeric prefixes** according to issuer (*AmericanE
 This nuget focuses on the **performance**. 
 
 ## Changelog
-- **x.x.x** - Performance enhancement: 
+- **1.1.0** - Performance enhancement: 
   - *IsValid(params CardIssuer[] issuers)* method perf enhancement - 5.5x faster and half memory allocation then in v1.0.0
   - Faster creation of *CreditCard* object (*Load()* method optimized)
   - Removed redundant string allocation in *CreditCard* CTOR
