@@ -10,4 +10,5 @@ Except of the validation features, this nuget focuses on the **performance** a l
 - **x.x.x** - Performance enhancement: 
   - *IsValid(params CardIssuer[] issuers)* method perf enhancement - 5.5x faster and half memory allocation then in v1.0.0
   - Faster creation of *CreditCard* object (*Load()* method optimized)
+  - Removed redundant string allocation in *CreditCard* CTOR
 - **1.0.0** - Init version - card validation

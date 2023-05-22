@@ -2,7 +2,7 @@
 
 internal static class ValidationHelper
 {
-    internal static bool IsValidFormat(this ReadOnlySpan<char> input, out string? cleanCardNumber)
+    internal static bool IsValidFormat(this ReadOnlySpan<char> input, out string cleanCardNumber)
     {
         Span<char> output = stackalloc char[input.Length];
         int outputIndex = 0;
@@ -16,7 +16,7 @@ internal static class ValidationHelper
             }
             else if (!char.IsWhiteSpace(input[i]))
             {
-                cleanCardNumber = null;
+                cleanCardNumber = string.Empty;
                 return false;
             }
         }

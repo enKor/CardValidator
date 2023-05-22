@@ -6,21 +6,20 @@ namespace CardValidator;
 
 public record CreditCard
 {
-    public string Number { get; }
+    public string Number => _unifiedCardNumberFormat;
+    private readonly string _unifiedCardNumberFormat;
 
     public CardIssuer Issuer { get; private set; }
 
     public string Category => _category ??= IssuerCategory.Identifiers[Number[0]];
     private string? _category;
-
+    
     public CreditCard(ReadOnlySpan<char> cardNumber, bool ignoreCardNumberLength = false)
     {
-        if (!cardNumber.IsValidFormat(out var unifiedCardNumberFormat))
+        if (!cardNumber.IsValidFormat(out _unifiedCardNumberFormat))
         {
             throw new ArgumentException("Invalid card number. Numbers and \" \" (space) allowed.");
         }
-
-        Number = unifiedCardNumberFormat!;
 
         Load(ignoreCardNumberLength);
     }

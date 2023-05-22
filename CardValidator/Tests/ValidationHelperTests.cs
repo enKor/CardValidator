@@ -12,7 +12,7 @@ public class ValidationHelperTests
     {
         // Arrange
         var input = "1234 5678 9012 3456".AsSpan();
-        string? cleanCardNumber;
+        string cleanCardNumber;
 
         // Act
         var result = input.IsValidFormat(out cleanCardNumber);
@@ -27,13 +27,13 @@ public class ValidationHelperTests
     {
         // Arrange
         var input = "12ab34 5678 9012 3456".AsSpan();
-        string? cleanCardNumber;
+        string cleanCardNumber;
 
         // Act
         var result = input.IsValidFormat(out cleanCardNumber);
 
         // Assert
         Assert.False(result);
-        Assert.Null(cleanCardNumber);
+        Assert.Equal(string.Empty, cleanCardNumber);
     }
 }
