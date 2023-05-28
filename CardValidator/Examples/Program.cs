@@ -28,7 +28,7 @@ catch (Exception ex)
 
 // Luhn check
 string visaCardNumber2 = "4205 2245 9865 9069";
-CreditCard visaCard2 = new CreditCard(visaCardNumber);
+CreditCard visaCard2 = new CreditCard(visaCardNumber2);
 // Valid Luhn for Visa
 Console.WriteLine(visaCard.IsValid(CardIssuer.Visa));
 // Valid Luhn for at least one of Visa or MasterCard
