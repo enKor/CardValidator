@@ -22,7 +22,6 @@
 		<!--<PackageIconUrl>https://github.com/enKor/CardValidator/blob/main/logo.png</PackageIconUrl>-->
 		<PackageTags>CreditCard;Credit;Card;Validator;Generator;Check;Luhn;CardInfo;performance</PackageTags>
 		<Authors>Martin Procházka</Authors>
-		<PackageReleaseNotes>Init version</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<ItemGroup>
