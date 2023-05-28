@@ -48,11 +48,6 @@ internal static class CardData
             {
                 new()
                 {
-                    Lengths = new List<int>(3) { 13, 16, 19 },
-                    Prefixes = new List<string>(1) { "4" }
-                },
-                new()
-                {
                     Lengths = new List<int>(1) { 16 },
                     Prefixes = new List<string>()
                         .AddRange(51, 55)
