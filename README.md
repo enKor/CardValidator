@@ -58,6 +58,8 @@ This nuget focuses on the **performance**.
 
 
 ## Changelog
+- **1.2.0**
+  - Added vaidation helpers methods (*IsValidNumber*, *IsValidFormat*)
 - **1.1.1** 
   - MasterCard specification fixed
   - Added demo examples

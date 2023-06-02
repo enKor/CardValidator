@@ -8,9 +8,9 @@
 		<AssemblyName>CardValidator</AssemblyName>
 		<RootNamespace>CardValidator</RootNamespace>
 
-		<Version>1.1.1</Version>
-		<FileVersion>1.1.1</FileVersion>
-		<AssemblyVersion>1.1.1</AssemblyVersion>
+		<Version>1.2.0</Version>
+		<FileVersion>1.2.0</FileVersion>
+		<AssemblyVersion>1.2.0</AssemblyVersion>
 
 		<title>Card Validator</title>
 		<Copyright>Copyright © Martin Procházka (aka. EnKor) 2023</Copyright>
