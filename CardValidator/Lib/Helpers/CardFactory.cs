@@ -35,7 +35,7 @@ public static class CardFactory
             return random;
         }
 
-        var checkDigit = EnKor.Luhn.CalculateCheckDigit(random.AsSpan()[..^1]);
+        var checkDigit = EnKor.Luhn.CalculateCheckDigit(random);
         return $"{random}{checkDigit}";
     }
 }
