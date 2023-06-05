@@ -4,8 +4,17 @@ using System.Runtime.CompilerServices;
 
 namespace CardValidator.Helpers;
 
+/// <summary>
+/// Provides helper methods for validating credit card numbers.
+/// </summary>
 public static class ValidationHelper
 {
+    /// <summary>
+    /// Determines whether the specified credit card number is valid for the given issuer.
+    /// </summary>
+    /// <param name="cardNumber">The credit card number to validate.</param>
+    /// <param name="issuer">The card issuer.</param>
+    /// <returns><c>true</c> if the card number is valid for the given issuer; otherwise, <c>false</c>.</returns>
     public static bool IsValidNumber(ReadOnlySpan<char> cardNumber, CardIssuer issuer)
     {
         var info = CardData.BrandConfigurations[issuer];
@@ -23,6 +32,11 @@ public static class ValidationHelper
         return false;
     }
 
+    /// <summary>
+    /// Determines whether the specified string represents a valid card number format.
+    /// </summary>
+    /// <param name="cardNumber">The card number to validate.</param>
+    /// <returns><c>true</c> if the card number has a valid format; otherwise, <c>false</c>.</returns>
     public static bool IsValidFormat(ReadOnlySpan<char> cardNumber) =>
         cardNumber.IsValidFormat(out _);
 
@@ -49,7 +63,7 @@ public static class ValidationHelper
         cleanCardNumber = output[..outputIndex].ToString();
         return true;
     }
-    
+
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private static bool MatchLength(ReadOnlySpan<char> cardNumber, IReadOnlyList<int> lengths)
     {
@@ -77,5 +91,4 @@ public static class ValidationHelper
 
         return false;
     }
-
 }

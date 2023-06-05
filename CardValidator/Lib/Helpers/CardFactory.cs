@@ -2,10 +2,18 @@
 
 namespace CardValidator.Helpers;
 
+/// <summary>
+/// Provides methods to generate random card numbers based on card issuer.
+/// </summary>
 public static class CardFactory
 {
     private static readonly Random Random = new();
 
+    /// <summary>
+    /// Generates a random card number for the specified card issuer.
+    /// </summary>
+    /// <param name="issuer">The card issuer.</param>
+    /// <returns>A randomly generated card number.</returns>
     public static string GenerateRandomCardNumber(CardIssuer issuer)
     {
         var cardInfo = CardData.BrandConfigurations[issuer];
