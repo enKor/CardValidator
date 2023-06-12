@@ -55,9 +55,10 @@ public static class CardFactory
     public static IEnumerable<string> GenerateRandomCardNumbers(int count = 5)
     {
         var issuers = Enum.GetValues<CardIssuer>();
+        var issuersCount =  issuers.Length;
         for (int i = 0; i < count; i++)
         {
-            var issuerIdx = Random.Next(0, issuers.Length);
+            var issuerIdx = Random.Next(0, issuersCount);
             var issuer = issuers[issuerIdx];
             yield return GenerateRandomCardNumber(issuer);
         }
