@@ -46,4 +46,20 @@ public static class CardFactory
         var checkDigit = EnKor.Luhn.CalculateCheckDigit(random);
         return $"{random}{checkDigit}";
     }
+
+    /// <summary>
+    /// Generates multiple random card numbers.
+    /// </summary>
+    /// <param name="count">The number of card numbers to generate.</param>
+    /// <returns>A collection of randomly generated card numbers.</returns>
+    public static IEnumerable<string> GenerateRandomCardNumbers(int count = 5)
+    {
+        var issuers = Enum.GetValues<CardIssuer>();
+        for (int i = 0; i < count; i++)
+        {
+            var issuerIdx = Random.Next(0, issuers.Length);
+            var issuer = issuers[issuerIdx];
+            yield return GenerateRandomCardNumber(issuer);
+        }
+    }
 }

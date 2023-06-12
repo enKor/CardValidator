@@ -84,4 +84,18 @@ public class CardFactoryTests
                 x.Prefixes.Any(p => cardNumber.StartsWith(p)));
         Assert.Single(cfg);
     }
+
+    [Fact]
+    public void GenerateRandomCardNumbers_ReturnsExpectedNumberOfCardNumbers()
+    {
+        // Arrange
+        const int count = 10;
+
+        // Act
+        var cardNumbers = CardFactory.GenerateRandomCardNumbers(count).ToArray();
+
+        // Assert
+        Assert.Equal(count, cardNumbers.Length);
+        Assert.All(cardNumbers, Assert.NotEmpty);
+    }
 }
