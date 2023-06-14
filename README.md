@@ -85,7 +85,8 @@ The `CardFactory` class provides method generating valid card number.
 
 ```
 // Example: Generating a random card number for a specific issuer
-string randomCardNumber = CardFactory.GenerateRandomCardNumber(CardIssuer.Visa); Console.WriteLine(randomCardNumber); 
+string randomCardNumber = CardFactory.GenerateRandomCardNumber(CardIssuer.Visa); 
+Console.WriteLine(randomCardNumber); 
 // ---> Randomly generated card number for the specified issuer
 ```
 
